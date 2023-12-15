@@ -52,7 +52,7 @@ class camerasDB(Base):
 
     id = Column(Integer, primary_key=True)
     cam_model = Column(Text)
-    ipaddr = Column(CIDR)
+    addr = Column(CIDR)
     cab_id = Column(Integer)
     in_pos = Column(Boolean)
     pass_num = Column(Integer)

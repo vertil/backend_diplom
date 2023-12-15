@@ -13,6 +13,8 @@ from redis import Redis
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import func
 import re
+import numpy
+import base64
 
 
 from fastapi.security import OAuth2PasswordBearer
@@ -22,7 +24,7 @@ sys.path.append('../')
 
 from database.redis_connector import get_redis_session
 from database.db_connector import get_session
-from schemas.CV import personalDB
+from schemas.CV import personalDB, facesDB
 
 
 class Personal:
@@ -61,11 +63,9 @@ class Personal:
             logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
             raise HTTPException(status_code=401, detail="Invalid authentication credentials")
 
-        answer = self.session_db.query(func.worker_day_visits("20231205", 1)).all()
+        answer = self.session_db.query(func.worker_day_visits(date, per_id)).all()
 
         ans = []
-
-        #answer = [tuple(row) for row in answer]
 
         for i in answer:
             mystr=i[0]
@@ -76,12 +76,64 @@ class Personal:
             mystr = {"datetime": mystr[0], "cab_id": int(mystr[1]), "direction": status}
             ans.append(mystr)
 
-        # mystr = answer[0][0]
-        # mystr=mystr[1:-1].split(',')
-        # mystr={"datetime":mystr[0], "cab_id": int(mystr[1]), "direction": mystr[2]}
-        # ans.append(mystr)
-        # print(mystr)
 
         return JSONResponse(content=ans, status_code=200)
 
+    def worker_day_visits_pos(self,per_id: int,date: str,pos_bool: bool,user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
 
+        answer = self.session_db.query(func.worker_day_visits_pos(date, per_id, pos_bool)).all()
+
+        ans = []
+
+        for i in answer:
+            mystr=i[0]
+            mystr = mystr[1:-1].split(',')
+
+            mystr = {"datetime": mystr[0], "cab_id": int(mystr[1])}
+            ans.append(mystr)
+
+
+        return JSONResponse(content=ans, status_code=200)
+
+    def get_personal_faces(self,per_id: int,user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+
+        answer = self.session_db.query(facesDB.file).filter(facesDB.personal_id == per_id).all()
+
+
+        ans={}
+
+        # abc1=numpy.frombuffer( answer[0][0], numpy.uint8)
+        # print(type(abc1))
+        # abc2=numpy.frombuffer( answer[0][0], numpy.uint8).tostring()
+        # print(type(abc2))
+        # abc3=numpy.frombuffer( answer[0][0], numpy.uint8).tobytes()
+        # print(type(abc3))
+        # abc4=numpy.frombuffer( answer[0][0], numpy.uint8).tolist()
+        # print(type(abc4))
+        #
+        # abc5=cv2.imdecode(abc1, cv2.IMREAD_COLOR)
+
+        #abc6=str(abc3)
+
+
+        for i in enumerate(answer):
+            ans.update({f"image{i[0]}": str(i[1][0]) })
+
+        return JSONResponse(content=ans, status_code=200)
+
+    def get_single_face(self, face_id: int, user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+
+        answer = self.session_db.query(facesDB.file).filter(facesDB.id == face_id).all()
+
+        answer = {f"image": str(answer) }
+
+        return JSONResponse(content=answer, status_code=200)

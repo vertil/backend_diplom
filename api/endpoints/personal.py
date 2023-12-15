@@ -40,3 +40,29 @@ async def get_all(
 ):
     return service.worker_day_visits(personal_id,date,current_user.id)
 
+@router.get('/worker_day_visits_pos')
+async def get_all(
+        personal_id: int,
+        date: str,
+        pos_boolean: bool,
+        service: Personal = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.worker_day_visits_pos(personal_id,date,pos_boolean,current_user.id)
+
+@router.get('/get_personal_faces')
+async def get_all(
+        personal_id: int,
+        service: Personal = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.get_personal_faces(personal_id,current_user.id)
+
+@router.get('/get_single_faces')
+async def get_all(
+        face_id: int,
+        service: Personal = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.get_single_face(face_id,current_user.id)
+
