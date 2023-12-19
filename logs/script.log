@@ -1418,3 +1418,158 @@
 2023-12-19 16:39:58,122 SpawnProcess-17\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
 2023-12-19 16:39:58,122 SpawnProcess-17\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
 2023-12-19 16:39:58,127 SpawnProcess-17\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2023-12-19 22:48:09,034 MainProcess\root     INFO: default_user:admin alredy exist
+2023-12-19 22:48:09,312 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2023-12-19 22:48:10,203 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2023-12-19 22:48:10,206 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2023-12-19 22:48:10,225 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:70]
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:48:29,494 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:48:29,515 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2023-12-19 22:48:29,515 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
+2023-12-19 22:48:29,708 SpawnProcess-1\root     ERROR: authenticate_user:
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:49:11,343 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:49:11,344 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:11,344 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:14,677 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:14,678 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:49:14,678 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:49:14,678 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:14,678 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:49:15,264 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:15,264 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:49:15,264 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:15,265 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:20,028 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:49:28,234 MainProcess\root     INFO: default_user:admin alredy exist
+2023-12-19 22:49:28,518 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2023-12-19 22:49:28,674 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2023-12-19 22:49:28,674 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2023-12-19 22:49:28,678 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:49:34,930 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:49:34,979 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2023-12-19 22:49:34,979 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
+2023-12-19 22:50:46,709 MainProcess\root     INFO: default_user:admin alredy exist
+2023-12-19 22:50:46,975 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2023-12-19 22:50:47,128 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2023-12-19 22:50:47,128 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2023-12-19 22:50:47,133 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:50:56,107 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:50:56,141 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2023-12-19 22:50:56,141 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
+2023-12-19 22:51:04,568 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:51:04,568 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:51:04,569 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:53:59,418 SpawnProcess-1\sqlalchemy.pool.impl.QueuePool ERROR: Exception during reset or similar
+Traceback (most recent call last):
+  File "F:\projects\backend-diplom\venv\lib\site-packages\sqlalchemy\pool\base.py", line 983, in _finalize_fairy
+    fairy._reset(
+  File "F:\projects\backend-diplom\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1422, in _reset
+    pool._dialect.do_rollback(self)
+  File "F:\projects\backend-diplom\venv\lib\site-packages\sqlalchemy\engine\default.py", line 657, in do_rollback
+    dbapi_connection.rollback()
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2023-12-19 22:53:59,419 SpawnProcess-1\sqlalchemy.pool.impl.QueuePool ERROR: Exception during reset or similar
+Traceback (most recent call last):
+  File "F:\projects\backend-diplom\venv\lib\site-packages\sqlalchemy\pool\base.py", line 983, in _finalize_fairy
+    fairy._reset(
+  File "F:\projects\backend-diplom\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1422, in _reset
+    pool._dialect.do_rollback(self)
+  File "F:\projects\backend-diplom\venv\lib\site-packages\sqlalchemy\engine\default.py", line 657, in do_rollback
+    dbapi_connection.rollback()
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2023-12-19 22:54:09,646 MainProcess\root     INFO: default_user:admin alredy exist
+2023-12-19 22:54:09,915 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2023-12-19 22:54:10,065 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2023-12-19 22:54:10,066 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2023-12-19 22:54:10,070 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
