@@ -78,3 +78,59 @@ class Cabinets:
             ans.append(mystr)
 
         return JSONResponse(content=ans, status_code=200)
+
+    def cab_visits_pos(self, cab_id: int, date: str,pos_bool: bool, user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+
+        answer = self.session_db.query(func.cab_visits_pos(date, cab_id, pos_bool)).all()
+
+        ans = []
+
+        for i in answer:
+            mystr = i[0]
+            mystr = mystr[1:-1].split(',')
+
+            mystr = {"datetime": mystr[0], "per_id": int(mystr[1])}
+            ans.append(mystr)
+
+        return JSONResponse(content=ans, status_code=200)
+
+    def pass_visits(self, date: str, cab_id: int, pass_num: int, user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+
+        answer = self.session_db.query(func.pass_visits(date, pass_num, cab_id)).all()
+
+        ans = []
+
+        for i in answer:
+            mystr=i[0]
+            mystr = mystr[1:-1].split(',')
+            status = False
+            if(mystr[2]=='t'):
+                status=True
+            mystr = {"datetime": mystr[0], "per_id": int(mystr[1]), "direction": status}
+            ans.append(mystr)
+
+        return JSONResponse(content=ans, status_code=200)
+
+    def pass_visits_pos(self, date: str, cab_id: int, pass_num: int,pos_bool: bool, user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+
+        answer = self.session_db.query(func.pass_visits_pos(date,pass_num, cab_id,pos_bool )).all()
+
+        ans = []
+
+        for i in answer:
+            mystr = i[0]
+            mystr = mystr[1:-1].split(',')
+
+            mystr = {"datetime": mystr[0], "per_id": int(mystr[1])}
+            ans.append(mystr)
+
+        return JSONResponse(content=ans, status_code=200)

@@ -11,6 +11,11 @@ from pydantic import ValidationError
 from sqlalchemy.orm import Session
 from redis import Redis
 from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy import func
+import re
+import numpy
+import base64
+
 
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy import or_
@@ -19,10 +24,10 @@ sys.path.append('../')
 
 from database.redis_connector import get_redis_session
 from database.db_connector import get_session
-from  models.polygon import PolygonScheme
-from schemas.polygon import PolygonDB, MachineDB
+from schemas.CV import in_out_dateDB
 
-class Machine:
+
+class In_out_status:
     def __init__(self, session_db: Client = Depends(get_session),
                  session_redis: Redis = Depends(get_redis_session)):
         self.session_db = session_db
@@ -35,18 +40,12 @@ class Machine:
         if self.session_redis.get(user_id):
             return True
 
-
-    def get_info(self, id: int, user_id: int):
-
+    def get_limit(self,limit: int, user_id):
         if self._check_user_in_redis(user_id) is None:
             logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
             raise HTTPException(status_code=401, detail="Invalid authentication credentials")
-        
-        try:
-            answer = self.session_db.query(MachineDB).filter(MachineDB.id == id).first()
-        except Exception as e:
-            logging.error(f"machine/get_info machine_id={id} - can't get data from db: {e}")
-            raise HTTPException(status_code=400, detail=f"can't get data from db: \n {e}")
 
-        logging.info(f'machine/get_info machine_id={id} successfull')
+        answer = self.session_db.query(in_out_dateDB).filter().limit(limit).all()
+
         return JSONResponse(content=[jsonable_encoder(answer)], status_code=200)
+

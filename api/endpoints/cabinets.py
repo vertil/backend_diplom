@@ -38,3 +38,33 @@ async def get_all(
 ):
     return service.cab_visits(cab_id, date, current_user.id)
 
+@router.get('/cab_visits_pos')
+async def get_all(
+        cab_id: int,
+        date: str,
+        pos_boolean: bool,
+        service: Cabinets = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.cab_visits_pos(cab_id, date, pos_boolean, current_user.id)
+
+@router.get('/pass_visits')
+async def get_all(
+        date: str,
+        cab_id: int,
+        pass_num: int,
+        service: Cabinets = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.pass_visits(date, cab_id, pass_num, current_user.id)
+
+@router.get('/pass_visits_pos')
+async def get_all(
+        date: str,
+        cab_id: int,
+        pass_num: int,
+        pos_boolean: bool,
+        service: Cabinets = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.pass_visits_pos(date, cab_id, pass_num, pos_boolean, current_user.id)
