@@ -1,0 +1,52 @@
+version: '2.1'
+
+services:
+  backend:
+    hostname: backend
+    container_name: backend
+    build:
+      context: ./back
+    restart: always
+    volumes:
+      - ./back/:/app/
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      web:
+        ipv4_address: "192.168.0.2"
+    ports:
+      - 4000:4000
+
+  postgres:
+    build: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: userP
+      POSTGRES_PASSWORD: mypass
+      POSTGRES_DB: facedb
+    volumes:
+      - postgres_data:/var/lib/pg/data
+      - ./postgres/init.sh:/docker-entrypoint-initdb.d/init.sh
+      - ./postgres/testDB.sql:/docker-entrypoint-initdb.d/testDB.sql
+    networks:
+      web:
+        ipv4_address: "192.168.0.4"
+        
+  redis:
+    image: "redis:6"
+    networks:
+      web:
+        ipv4_address: "192.168.0.5"
+    
+    
+networks:
+  web:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.0.0/24"
+
+
+volumes:
+  postgres_data:

@@ -1573,3 +1573,18 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2023-12-19 22:54:10,065 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
 2023-12-19 22:54:10,066 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
 2023-12-19 22:54:10,070 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2023-12-19 22:54:34,849 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2023-12-19 22:54:34,850 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2023-12-19 22:54:34,887 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2023-12-19 22:54:34,887 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
