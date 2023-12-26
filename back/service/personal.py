@@ -121,10 +121,12 @@ class Personal:
 
         #abc6=str(abc3)
 
-
+        faces=[]
         for i in enumerate(answer):
-            ans.update({f"image{i[0]}": str(i[1][0]) })
-
+            faces.append( str(i[1][0]));
+        # for i in enumerate(answer):
+        #     ans.update({f"image{i[0]}": str(i[1][0]) })
+        ans={"images":faces}
         return JSONResponse(content=ans, status_code=200)
 
     def get_single_face(self, face_id: int, user_id):

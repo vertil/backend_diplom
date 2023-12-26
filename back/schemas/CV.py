@@ -71,5 +71,5 @@ class undendified_facesDB(Base):
     __tablename__ = "undendified_faces"
 
     time = Column(DateTime, default=datetime.datetime.utcnow, primary_key=True)
-    per_id = Column(Integer)
+    cam_id = Column(Integer)
     file = Column(BYTEA)
