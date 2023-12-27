@@ -50,7 +50,7 @@ async def get_all(
 ):
     return service.worker_day_visits_pos(personal_id,date,pos_boolean,current_user.id)
 
-@router.get('/get_personal_faces')
+@router.get('/get_personal_faces_ids')
 async def get_all(
         personal_id: int,
         service: Personal = Depends(),

@@ -28,6 +28,7 @@ from database.db_connector import get_session
 from schemas.CV import personalDB, facesDB
 
 
+
 class Personal:
     def __init__(self, session_db: Client = Depends(get_session),
                  session_redis: Redis = Depends(get_redis_session)):
@@ -104,7 +105,7 @@ class Personal:
             logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
             raise HTTPException(status_code=401, detail="Invalid authentication credentials")
 
-        answer = self.session_db.query(facesDB.file).filter(facesDB.personal_id == per_id).all()
+        answer = self.session_db.query(facesDB.id).filter(facesDB.personal_id == per_id).all()
 
 
         ans={}
@@ -127,7 +128,7 @@ class Personal:
             faces.append( str(i[1][0]));
         # for i in enumerate(answer):
         #     ans.update({f"image{i[0]}": str(i[1][0]) })
-        ans={"images":faces}
+        ans={"image_id":faces}
         return JSONResponse(content=ans, status_code=200)
 
     def get_single_face(self, face_id: int, user_id):
@@ -141,7 +142,14 @@ class Personal:
 
         #answer = {f"image": answer[0][0].decode() }
         # answer = {f"image": BytesIO(answer[0][0])}
+        #abs = BytesIO(answer[0][0].decode('base64'))
+        #print(abs)
+        #sas = StreamingResponse(abs, media_type="image/png")
 
+        abs=BytesIO( base64.b64encode(answer[0][0]))
+        print(type(abs))
+        print(sys.getdefaultencoding())
+        return StreamingResponse(abs, media_type="image/png")
         sas = StreamingResponse(BytesIO(answer[0][0]), media_type="image/png")
         return sas
         #return StreamingResponse(BytesIO(answer[0][0]), media_type="image/png",
