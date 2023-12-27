@@ -15,7 +15,8 @@ from sqlalchemy import func
 import re
 import numpy
 import base64
-
+from io import BytesIO
+from fastapi.responses import StreamingResponse
 
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy import or_
@@ -98,7 +99,7 @@ class Personal:
 
         return JSONResponse(content=ans, status_code=200)
 
-    def get_personal_faces(self,per_id: int,user_id):
+    def get_personal_faces_ids(self,per_id: int,user_id):
         if self._check_user_in_redis(user_id) is None:
             logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
             raise HTTPException(status_code=401, detail="Invalid authentication credentials")
@@ -136,6 +137,14 @@ class Personal:
 
         answer = self.session_db.query(facesDB.file).filter(facesDB.id == face_id).all()
 
-        answer = {f"image": str(answer) }
+        print(type(answer[0][0]))
+
+        #answer = {f"image": answer[0][0].decode() }
+        # answer = {f"image": BytesIO(answer[0][0])}
+
+        sas = StreamingResponse(BytesIO(answer[0][0]), media_type="image/png")
+        return sas
+        #return StreamingResponse(BytesIO(answer[0][0]), media_type="image/png",
+        #                          headers={"Content-Disposition": f"attachment; filename={face_id}.png"})
 
         return JSONResponse(content=answer, status_code=200)

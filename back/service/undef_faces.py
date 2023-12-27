@@ -25,7 +25,8 @@ sys.path.append('../')
 from database.redis_connector import get_redis_session
 from database.db_connector import get_session
 from schemas.CV import undendified_facesDB
-
+from io import BytesIO
+from fastapi.responses import StreamingResponse
 
 class undef_faces:
     def __init__(self, session_db: Client = Depends(get_session),
@@ -45,17 +46,17 @@ class undef_faces:
             logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
             raise HTTPException(status_code=401, detail="Invalid authentication credentials")
 
-        answer = self.session_db.query(undendified_facesDB).order_by(undendified_facesDB.time.desc()).limit(limit).all()
+        answer = self.session_db.query(undendified_facesDB.time, undendified_facesDB.cam_id).order_by(undendified_facesDB.time.desc()).limit(limit).all()
 
         ans = []
 
         for i in answer:
             abc = i
-            ans.append({"time": str(i.time), "cam_id": i.cam_id, "file": str(i.file)})
+            ans.append({"time": str(i.time), "cam_id": i.cam_id, })
 
 
+        return JSONResponse(content=ans, status_code=200)
 
-        return JSONResponse(content={"ans":ans}, status_code=200)
 
     def get_by_timestamp(self, timestamp: str, user_id):
         if self._check_user_in_redis(user_id) is None:
@@ -69,5 +70,9 @@ class undef_faces:
         for i in answer:
             abc = i
             ans.append({"cam_id": i.cam_id, "file": str(i.file)})
+
+        sas = StreamingResponse(BytesIO(answer[0].file), media_type="image/png")
+        return sas
+
 
         return JSONResponse(content={"ans":ans}, status_code=200)

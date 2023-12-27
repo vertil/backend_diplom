@@ -56,7 +56,7 @@ async def get_all(
         service: Personal = Depends(),
         current_user: User = Depends(get_current_user),
 ):
-    return service.get_personal_faces(personal_id,current_user.id)
+    return service.get_personal_faces_ids(personal_id,current_user.id)
 
 @router.get('/get_single_faces')
 async def get_all(
