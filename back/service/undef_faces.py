@@ -65,14 +65,14 @@ class undef_faces:
 
         answer = self.session_db.query(undendified_facesDB).filter(undendified_facesDB.time==timestamp).order_by(undendified_facesDB.time.desc()).all()
 
-        ans = []
-
-        for i in answer:
-            abc = i
-            ans.append({"cam_id": i.cam_id, "file": str(i.file)})
-
-        sas = StreamingResponse(BytesIO(answer[0].file), media_type="image/png")
-        return sas
-
-
+        # ans = []
+        #
+        # for i in answer:
+        #     abc = i
+        #     ans.append({"cam_id": i.cam_id, "file": str(i.file)})
+        #
+        # sas = StreamingResponse(BytesIO(answer[0].file), media_type="image/png")
+        # return sas
+        abs = BytesIO(base64.b64encode(answer[0].file))
+        return StreamingResponse(abs, media_type="image/png")
         return JSONResponse(content={"ans":ans}, status_code=200)
