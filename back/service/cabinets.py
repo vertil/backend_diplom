@@ -54,9 +54,30 @@ class Cabinets:
             logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
             raise HTTPException(status_code=401, detail="Invalid authentication credentials")
 
-        answer = self.session_db.query(cabinetsDB).filter().all()
+        answer = self.session_db.query(cabinetsDB.id,cabinetsDB.name,cabinetsDB.floor,cabinetsDB.dep_id).filter().all()
 
-        return JSONResponse(content=[jsonable_encoder(answer)], status_code=200)
+        ans=[]
+        for i in answer:
+            mystr=i
+            print(mystr)
+            mystr = {"id": mystr[0], "name": mystr[1], "floor": int(mystr[2]), "dep_id": mystr[3]}
+            ans.append(mystr)
+
+
+        return JSONResponse(content=ans, status_code=200)
+
+    def get_cabinet_per_ids(self,cab_id: int,user_id: int):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+
+        answer = self.session_db.query(cabinetsDB.pers_ids).filter(cabinetsDB.id == cab_id).all()
+
+        ans=[]
+
+        ans = {"pers_ids": answer[0][0]}
+
+        return JSONResponse(content=ans, status_code=200)
 
     def cab_visits(self, cab_id: int, date: str, user_id):
         if self._check_user_in_redis(user_id) is None:

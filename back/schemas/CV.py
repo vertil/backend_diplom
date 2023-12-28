@@ -3,7 +3,7 @@ import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Boolean, Column, Integer, String, DateTime, Text, Date
-from sqlalchemy.dialects.postgresql import BYTEA, CIDR
+from sqlalchemy.dialects.postgresql import BYTEA, CIDR, ARRAY
 from sqlalchemy.orm import declarative_base
 
 
@@ -45,6 +45,7 @@ class cabinetsDB(Base):
     name = Column(Text)
     floor = Column(Integer)
     dep_id = Column(Integer)
+    pers_ids = Column(ARRAY(Integer))
 
 
 class camerasDB(Base):
