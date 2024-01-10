@@ -24,7 +24,7 @@ sys.path.append('../')
 
 from database.redis_connector import get_redis_session
 from database.db_connector import get_session
-from schemas.CV import cabinetsDB, facesDB
+from schemas.CV import cabinetsDB, facesDB, personalDB
 
 
 class Cabinets:
@@ -88,6 +88,8 @@ class Cabinets:
 
         ans=[]
 
+        pers = self.session_db.query(personalDB).filter().all()
+
         for i in answer:
             mystr=i[0]
             mystr = mystr[1:-1].split(',')
@@ -95,7 +97,13 @@ class Cabinets:
             print(mystr)
             if (mystr[2] == 't'):
                 status = True
-            mystr = {"datetime": mystr[0], "per_id": int(mystr[1]), "direction": status}
+
+            for i in pers:
+                if (i.id==int(mystr[1])):
+                    per_name=f"{i.last_name} {i.first_name} {i.father_name}"
+                    break
+            mystr = {"datetime": mystr[0], "name": per_name, "direction": status}
+            #mystr = {"datetime": mystr[0], "per_id": int(mystr[1]), "direction": status}
             ans.append(mystr)
 
         return JSONResponse(content=ans, status_code=200)
@@ -109,11 +117,19 @@ class Cabinets:
 
         ans = []
 
+        pers = self.session_db.query(personalDB).filter().all()
+
         for i in answer:
             mystr = i[0]
             mystr = mystr[1:-1].split(',')
 
-            mystr = {"datetime": mystr[0], "per_id": int(mystr[1])}
+            for i in pers:
+                if (i.id == int(mystr[1])):
+                    per_name = f"{i.last_name} {i.first_name} {i.father_name}"
+                    break
+
+            mystr = {"datetime": mystr[0], "name": per_name}
+            #mystr = {"datetime": mystr[0], "per_id": int(mystr[1])}
             ans.append(mystr)
 
         return JSONResponse(content=ans, status_code=200)
@@ -127,13 +143,20 @@ class Cabinets:
 
         ans = []
 
+        pers = self.session_db.query(personalDB).filter().all()
+
         for i in answer:
             mystr=i[0]
             mystr = mystr[1:-1].split(',')
             status = False
             if(mystr[2]=='t'):
                 status=True
-            mystr = {"datetime": mystr[0], "per_id": int(mystr[1]), "direction": status}
+            for i in pers:
+                if (i.id == int(mystr[1])):
+                    per_name = f"{i.last_name} {i.first_name} {i.father_name}"
+                    break
+            mystr = {"datetime": mystr[0], "name": per_name, "direction": status}
+            #mystr = {"datetime": mystr[0], "per_id": int(mystr[1]), "direction": status}
             ans.append(mystr)
 
         return JSONResponse(content=ans, status_code=200)
@@ -147,11 +170,18 @@ class Cabinets:
 
         ans = []
 
+        pers = self.session_db.query(personalDB).filter().all()
+
         for i in answer:
             mystr = i[0]
             mystr = mystr[1:-1].split(',')
+            for i in pers:
+                if (i.id == int(mystr[1])):
+                    per_name = f"{i.last_name} {i.first_name} {i.father_name}"
+                    break
 
-            mystr = {"datetime": mystr[0], "per_id": int(mystr[1])}
+            mystr = {"datetime": mystr[0], "name": per_name}
+            #mystr = {"datetime": mystr[0], "per_id": int(mystr[1])}
             ans.append(mystr)
 
         return JSONResponse(content=ans, status_code=200)

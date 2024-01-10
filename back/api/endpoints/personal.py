@@ -66,3 +66,20 @@ async def get_all(
 ):
     return service.get_single_face(face_id,current_user.id)
 
+@router.get('/get_day_work_time')
+async def get_all(
+        per_id: int,
+        date: str,
+        service: Personal = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.get_day_work_time(per_id, date,current_user.id)
+
+@router.get('/get_day_work_time_month')
+async def get_all(
+        per_id: int,
+        date: str,
+        service: Personal = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.get_day_work_time(per_id, date,current_user.id)

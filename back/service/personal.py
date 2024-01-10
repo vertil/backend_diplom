@@ -69,15 +69,98 @@ class Personal:
 
         ans = []
 
+        pos = 0
+        cabs=[]
         for i in answer:
+
+            #prepare data
             mystr=i[0]
             mystr = mystr[1:-1].split(',')
             status = False
             if(mystr[2]=='t'):
                 status=True
+
+            #CALCULATING TIME IN CABINETS------------------------------------------------------------------------
+
+            test = datetime.strptime(mystr[0][1:-1],"%Y-%m-%d %H:%M:%S.%f")
+
+            if(status==False and pos==0):
+
+                #hour={mystr[1]:test.time().strftime("%H:%M:%S.%f")}
+                secondst=test.hour*3600+test.minute*60+test.second
+                hour={mystr[1]:secondst}
+                cabs.append(hour)
+
+            elif(status==True and pos==len(answer)-1):
+
+                cab_id=mystr[1]
+
+                found=False
+                for i in cabs:
+                    keyys = list (i.keys())
+                    if(cab_id in keyys):
+                        found=True
+                        # oldtime = datetime.strptime(i[keyys[0]],"%H:%M:%S.%f").time()
+                        # oldtime = oldtime.hour*3600+oldtime.minute*60+oldtime.second
+                        # print(oldtime)
+                        oldtime=i[keyys[0]]
+
+                        currtime = test.hour * 3600 + test.minute * 60 + test.second
+                        newtime=(86400-currtime)+oldtime
+
+
+                        i[keyys[0]]=newtime
+
+                if found==False:
+                    secondst = test.hour * 3600 + test.minute * 60 + test.second
+                    hour = {mystr[1]: 86400-secondst}
+                    cabs.append(hour)
+
+            else:
+                cab_id = mystr[1]
+
+                found = False
+                for i in cabs:
+                    keyys = list(i.keys())
+                    if (cab_id in keyys):
+                        found=True
+                        oldtime = i[keyys[0]]
+
+                        currtime = test.hour * 3600 + test.minute * 60 + test.second
+                        newtime = currtime-oldtime
+
+                        i[keyys[0]] = newtime
+
+
+                if found==False:
+                    secondst = test.hour * 3600 + test.minute * 60 + test.second
+                    hour = {mystr[1]: secondst}
+                    cabs.append(hour)
+
+
+            #-------------------------------------------------------------------------------------------
+
             mystr = {"datetime": mystr[0], "cab_id": int(mystr[1]), "direction": status}
             ans.append(mystr)
 
+            pos+=1
+
+        #CALCULATING TIME IN WORKING AND NON WORKING TIME------------------
+        sas = self.session_db.query(personalDB.work_cabs).filter(personalDB.id==per_id).all()
+        sas=sas[0][0]
+        worktime=0
+        nonworktime=0
+        for i in cabs:
+            if int(list(i.keys())[0]) in sas:
+                worktime+=i[list(i.keys())[0]]
+            else:
+                nonworktime+=i[list(i.keys())[0]]
+        #-------------------------------------------------
+        # print(cabs)
+        # print(worktime)
+        # print(nonworktime)
+        times={"worktime":worktime, "nonworktime":nonworktime}
+        ans={"short":cabs, "times": times ,"full":ans}
 
         return JSONResponse(content=ans, status_code=200)
 
@@ -156,3 +239,7 @@ class Personal:
         #                          headers={"Content-Disposition": f"attachment; filename={face_id}.png"})
 
         return JSONResponse(content=answer, status_code=200)
+
+    def get_day_work_time(self,per_id: int,date: str,user_id):
+        answer={"sad":"sas"}
+        return JSONResponse(content=[jsonable_encoder(answer)], status_code=200)

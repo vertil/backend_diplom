@@ -27,7 +27,7 @@ class personalDB(Base):
     email = Column(Text)
     birth = Column(Date)
     dep_id = Column(Integer)
-
+    work_cabs = Column(ARRAY(Integer))
 
 class facesDB(Base):
     __tablename__ = "faces"

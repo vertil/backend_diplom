@@ -15,10 +15,7 @@ class Settings(BaseSettings):
 
     redis_url: str 
 
-    proxmox_path: str
-    proxmox_user: str
-    proxmox_password: str
-    max_instances: int 
+
     default_user: str
     default_user_pass: str
     default_user_descr: str
