@@ -88,9 +88,23 @@ class Cabinets:
 
         ans=[]
 
-        pers = self.session_db.query(personalDB).filter().all()
+        pers_a = self.session_db.query(personalDB.id,personalDB.last_name,personalDB.first_name,personalDB.father_name,personalDB.work_cabs).filter().all()
 
+
+
+        pers={}
+
+        for i in pers_a:
+            mystr = i
+            pers[mystr[0]]= f"{mystr[1]} {mystr[2]} {mystr[3]}"
+            #mystr = {"id": mystr[0], "name": mystr[1], "floor": int(mystr[2]), "dep_id": mystr[3]}
+
+
+        pers_times=[]
+        pos = 0
         for i in answer:
+
+            #prepare data
             mystr=i[0]
             mystr = mystr[1:-1].split(',')
             status = False
@@ -98,13 +112,82 @@ class Cabinets:
             if (mystr[2] == 't'):
                 status = True
 
-            for i in pers:
-                if (i.id==int(mystr[1])):
-                    per_name=f"{i.last_name} {i.first_name} {i.father_name}"
-                    break
-            mystr = {"datetime": mystr[0], "name": per_name, "direction": status}
-            #mystr = {"datetime": mystr[0], "per_id": int(mystr[1]), "direction": status}
+
+            #CALCULATING TIME IN CABINETS------------------------------------------------------------------------
+
+            test = datetime.strptime(mystr[0][1:-1],"%Y-%m-%d %H:%M:%S.%f")
+
+            if (status == False and pos == 0):
+
+                secondst = test.hour * 3600 + test.minute * 60 + test.second
+                hour = {mystr[1]: secondst}
+                pers_times.append(hour)
+
+            elif (status == True and pos == len(answer) - 1):
+
+                per_id = mystr[1]
+
+                found = False
+
+                for i in pers_times:
+                    keyys = list(i.keys())
+                    if(per_id in keyys):
+                        found=True
+                        oldtime = i[keyys[0]]
+                        currtime = test.hour * 3600 + test.minute * 60 + test.second
+                        newtime = (86400 - currtime) + oldtime
+
+                        i[keyys[0]] = newtime
+
+                if found==False:
+                    secondst = test.hour * 3600 + test.minute * 60 + test.second
+                    hour = {mystr[1]: 86400 - secondst}
+                    pers_times.append(hour)
+
+            else:
+                per_id = mystr[1]
+
+                found = False
+                for i in pers_times:
+                    keyys = list(i.keys())
+                    if (per_id in keyys):
+                        found = True
+                        oldtime = i[keyys[0]]
+
+                        currtime = test.hour * 3600 + test.minute * 60 + test.second
+                        newtime = currtime - oldtime
+
+                        i[keyys[0]] = newtime
+
+                if found==False:
+                    secondst = test.hour * 3600 + test.minute * 60 + test.second
+                    hour = {mystr[1]: secondst}
+                    pers_times.append(hour)
+
+            #-------------------------------------------------------------------------------------------
+
+            #change per_id to full name
+
+            mystr = {"datetime": mystr[0], "name": pers[int(mystr[1])], "direction": status}
             ans.append(mystr)
+            pos+=1
+
+
+        #CALCULATE HOW MANY WORKERS AND NON WORKERS HAS BEN ----------------------
+
+
+        #-------------------------------------------------------------------------
+        buff=[]
+        for i in pers_times:
+
+            key_i=int(list(i.keys())[0])
+
+            buff.append( {pers[key_i]: i[list(i.keys())[0]]} )
+
+        pers_times=buff
+        print(pers_times)
+        short={"total persons": len(pers_times),  }
+        ans={"pers_times": pers_times, "full":ans}
 
         return JSONResponse(content=ans, status_code=200)
 

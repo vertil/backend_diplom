@@ -3198,3 +3198,240 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2024-01-10 16:44:31,173 SpawnProcess-5\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
 2024-01-10 16:44:31,173 SpawnProcess-5\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
 2024-01-10 16:44:31,178 SpawnProcess-5\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-10 23:16:02,917 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-10 23:16:03,229 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-10 23:16:03,821 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-10 23:16:03,822 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-10 23:16:03,834 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-10 23:16:23,943 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2024-01-10 23:16:23,966 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2024-01-10 23:16:23,967 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-01-10 23:32:19,413 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-10 23:32:19,413 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:8]
+2024-01-10 23:32:19,413 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[9:14]
+2024-01-10 23:32:19,413 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-10 23:32:19,413 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-10 23:32:19,413 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[15:23]
+2024-01-10 23:32:19,413 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[24:32]
+2024-01-10 23:32:19,414 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-10 23:32:19,414 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2024-01-11 12:39:02,539 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 12:39:02,824 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 12:39:03,448 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 12:39:03,450 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 12:39:03,463 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 12:39:29,488 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2024-01-11 12:39:29,535 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2024-01-11 12:39:29,535 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-01-11 12:54:33,300 SpawnProcess-2\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 12:54:33,451 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 12:54:33,452 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 12:54:33,456 SpawnProcess-2\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 12:54:42,413 SpawnProcess-3\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 12:54:42,568 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 12:54:42,569 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 12:54:42,573 SpawnProcess-3\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 12:56:03,740 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 12:56:04,391 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 12:56:04,712 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 12:56:04,712 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 12:56:04,720 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 12:56:29,279 SpawnProcess-2\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 12:56:29,614 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 12:56:29,615 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 12:56:29,623 SpawnProcess-2\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 12:57:35,885 SpawnProcess-3\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 12:57:36,222 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 12:57:36,222 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 12:57:36,230 SpawnProcess-3\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 13:02:06,798 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 13:02:07,063 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 13:02:07,216 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 13:02:07,216 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 13:02:07,220 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 13:17:35,771 SpawnProcess-2\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 13:17:35,934 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 13:17:35,934 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 13:17:35,939 SpawnProcess-2\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 13:25:29,401 SpawnProcess-3\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 13:25:29,575 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 13:25:29,575 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 13:25:29,580 SpawnProcess-3\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2024-01-11 13:42:52,209 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 13:42:52,210 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 13:42:52,210 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2024-01-11 13:42:52,210 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2024-01-11 13:42:52,210 SpawnProcess-3\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 13:42:52,210 SpawnProcess-3\multipart.multipart DEBUG: Calling on_end with no data
+2024-01-11 13:42:52,240 SpawnProcess-3\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2024-01-11 13:42:52,240 SpawnProcess-3\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-01-11 13:58:11,892 SpawnProcess-4\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 13:58:12,058 SpawnProcess-4\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 13:58:12,058 SpawnProcess-4\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 13:58:12,063 SpawnProcess-4\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 14:00:02,117 SpawnProcess-5\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 14:00:02,327 SpawnProcess-5\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 14:00:02,327 SpawnProcess-5\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 14:00:02,331 SpawnProcess-5\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 14:03:55,606 SpawnProcess-6\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 14:03:55,812 SpawnProcess-6\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 14:03:55,812 SpawnProcess-6\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 14:03:55,817 SpawnProcess-6\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 14:09:34,048 SpawnProcess-7\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 14:09:34,211 SpawnProcess-7\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 14:09:34,212 SpawnProcess-7\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 14:09:34,216 SpawnProcess-7\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 14:12:28,547 SpawnProcess-8\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 14:12:28,814 SpawnProcess-8\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 14:12:28,814 SpawnProcess-8\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 14:12:28,821 SpawnProcess-8\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 14:21:04,226 SpawnProcess-9\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 14:21:04,460 SpawnProcess-9\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 14:21:04,460 SpawnProcess-9\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 14:21:04,465 SpawnProcess-9\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 14:23:28,517 SpawnProcess-10\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 14:23:28,679 SpawnProcess-10\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 14:23:28,679 SpawnProcess-10\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 14:23:28,683 SpawnProcess-10\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 14:23:48,417 SpawnProcess-11\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 14:23:48,592 SpawnProcess-11\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 14:23:48,592 SpawnProcess-11\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 14:23:48,597 SpawnProcess-11\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:13:58,561 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 17:13:58,829 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:13:58,990 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:13:58,990 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:13:58,995 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 17:14:07,627 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2024-01-11 17:14:07,641 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2024-01-11 17:14:07,641 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-01-11 17:15:03,926 SpawnProcess-2\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:15:04,091 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:15:04,091 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:15:04,095 SpawnProcess-2\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:16:34,347 SpawnProcess-3\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:16:34,511 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:16:34,511 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:16:34,516 SpawnProcess-3\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:17:14,229 SpawnProcess-4\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:17:14,392 SpawnProcess-4\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:17:14,392 SpawnProcess-4\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:17:14,397 SpawnProcess-4\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:17:18,968 SpawnProcess-5\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:17:19,122 SpawnProcess-5\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:17:19,122 SpawnProcess-5\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:17:19,127 SpawnProcess-5\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:17:35,782 SpawnProcess-6\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:17:35,930 SpawnProcess-6\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:17:35,931 SpawnProcess-6\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:17:35,935 SpawnProcess-6\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:17:43,224 SpawnProcess-7\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:17:43,384 SpawnProcess-7\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:17:43,384 SpawnProcess-7\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:17:43,388 SpawnProcess-7\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:18:41,300 SpawnProcess-8\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:18:41,454 SpawnProcess-8\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:18:41,455 SpawnProcess-8\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:18:41,458 SpawnProcess-8\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:18:55,305 SpawnProcess-9\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:18:55,464 SpawnProcess-9\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:18:55,465 SpawnProcess-9\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:18:55,469 SpawnProcess-9\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:20:09,057 SpawnProcess-10\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:20:09,213 SpawnProcess-10\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:20:09,214 SpawnProcess-10\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:20:09,217 SpawnProcess-10\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:20:15,882 SpawnProcess-11\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:20:16,087 SpawnProcess-11\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:20:16,087 SpawnProcess-11\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:20:16,092 SpawnProcess-11\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:33:30,172 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 17:33:30,437 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:33:30,589 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:33:30,590 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:33:30,593 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:34:19,044 SpawnProcess-2\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:34:19,272 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:34:19,272 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:34:19,277 SpawnProcess-2\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:34:28,250 SpawnProcess-3\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:34:28,414 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:34:28,414 SpawnProcess-3\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:34:28,419 SpawnProcess-3\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:34:59,491 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 17:35:00,081 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:35:00,409 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:35:00,410 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:35:00,417 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:35:35,477 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 17:35:35,747 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:35:35,905 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:35:35,905 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:35:35,909 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 17:41:48,675 SpawnProcess-2\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 17:41:48,884 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 17:41:48,884 SpawnProcess-2\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 17:41:48,889 SpawnProcess-2\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 22:18:34,720 MainProcess\root     INFO: default_user:admin alredy exist
+2024-01-11 22:18:35,000 SpawnProcess-1\asyncio  DEBUG: Using selector: SelectSelector
+2024-01-11 22:18:35,406 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully imported ClickHouse Connect C data optimizations
+2024-01-11 22:18:35,406 SpawnProcess-1\clickhouse_connect.driver.ctypes DEBUG: Successfully import ClickHouse Connect C/Numpy optimizations
+2024-01-11 22:18:35,415 SpawnProcess-1\clickhouse_connect.json_impl DEBUG: Using python library for writing JSON byte strings
+2024-01-11 22:18:45,400 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 22:18:45,400 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[0:10]
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[11:19]
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[20:28]
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[29:34]
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_start with no data
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_name with data[35:43]
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_data with data[44:52]
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_field_end with no data
+2024-01-11 22:18:45,401 SpawnProcess-1\multipart.multipart DEBUG: Calling on_end with no data
+2024-01-11 22:18:45,423 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: detected 'bcrypt' backend, version '4.0.1'
+2024-01-11 22:18:45,424 SpawnProcess-1\passlib.handlers.bcrypt DEBUG: 'bcrypt' backend lacks $2$ support, enabling workaround
