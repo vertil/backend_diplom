@@ -268,3 +268,15 @@ class Cabinets:
             ans.append(mystr)
 
         return JSONResponse(content=ans, status_code=200)
+
+    def get_cabs_names(self,user_id):
+        answer = self.session_db.query(cabinetsDB.id,cabinetsDB.name).all()
+
+        ans = {}
+
+        for i in answer:
+            mystr = i
+            ans[mystr[0]]= f"{mystr[1]}"
+
+
+        return JSONResponse(content=ans, status_code=200)

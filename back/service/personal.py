@@ -25,7 +25,7 @@ sys.path.append('../')
 
 from database.redis_connector import get_redis_session
 from database.db_connector import get_session
-from schemas.CV import personalDB, facesDB
+from schemas.CV import personalDB, facesDB, cabinetsDB
 
 
 
@@ -156,10 +156,28 @@ class Personal:
             else:
                 nonworktime+=i[list(i.keys())[0]]
         #-------------------------------------------------
+        #CHANGE CAB ID TO CAB NAME-------------
+        answer = self.session_db.query(cabinetsDB.id, cabinetsDB.name).all()
+        cabs_names = {}
+        for i in answer:
+            mystr = i
+            cabs_names[mystr[0]] = f"{mystr[1]}"
+
+        for i in ans:
+            id=i["cab_id"]
+            i["cab_id"]=cabs_names[id]
+        test=[]
+        for i in cabs:
+            id=list(i.keys())[0]
+            key_i=cabs_names[int(id)]
+            val_i=i[id]
+            test.append({key_i:val_i})
+        cabs=test
+        #---------------------
         # print(cabs)
         # print(worktime)
         # print(nonworktime)
-        times={"worktime":worktime, "nonworktime":nonworktime}
+        times={"в рабочих помещениях":worktime, "в нерабочих помещениях":nonworktime}
         ans={"short":cabs, "times": times ,"full":ans}
 
         return JSONResponse(content=ans, status_code=200)
@@ -180,6 +198,15 @@ class Personal:
             mystr = {"datetime": mystr[0], "cab_id": int(mystr[1])}
             ans.append(mystr)
 
+            # CHANGE CAB ID TO CAB NAME-------------
+        answer_r = self.session_db.query(cabinetsDB.id, cabinetsDB.name).all()
+        cabs_names = {}
+        for i in answer_r:
+            mystr = i
+            cabs_names[mystr[0]] = f"{mystr[1]}"
+
+        for i in ans:
+            i["cab_id"]=cabs_names[i["cab_id"]]
 
         return JSONResponse(content=ans, status_code=200)
 

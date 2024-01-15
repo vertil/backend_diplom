@@ -29,6 +29,13 @@ async def get_all(
 ):
     return service.get_all(current_user.id)
 
+@router.get('/get_cabs_names')
+async def get_all(
+        service: Cabinets = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.get_cabs_names(current_user.id)
+
 @router.get('/get_cabinet_per_ids')
 async def get_all(
         cabinet_id: int,
