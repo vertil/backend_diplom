@@ -270,6 +270,9 @@ class Cabinets:
         return JSONResponse(content=ans, status_code=200)
 
     def get_cabs_names(self,user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credenti")
         answer = self.session_db.query(cabinetsDB.id,cabinetsDB.name).all()
 
         ans = {}
@@ -278,5 +281,19 @@ class Cabinets:
             mystr = i
             ans[mystr[0]]= f"{mystr[1]}"
 
+
+        return JSONResponse(content=ans, status_code=200)
+
+    def get_cabs_passages(self,user_id):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credenti")
+        answer = self.session_db.query(cabinetsDB.id,cabinetsDB.passages).all()
+
+        ans = {}
+
+        for i in answer:
+            mystr = i
+            ans[mystr[0]]= mystr[1]
 
         return JSONResponse(content=ans, status_code=200)

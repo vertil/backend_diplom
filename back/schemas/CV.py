@@ -46,6 +46,8 @@ class cabinetsDB(Base):
     floor = Column(Integer)
     dep_id = Column(Integer)
     pers_ids = Column(ARRAY(Integer))
+    passages = Column(Integer)
+
 
 
 class camerasDB(Base):

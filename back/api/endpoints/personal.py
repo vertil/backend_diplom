@@ -30,6 +30,12 @@ async def get_all(
 ):
     return service.get_all(current_user.id)
 
+@router.get('/get_pers_names')
+async def get_all(
+        service: Personal = Depends(),
+        current_user: User = Depends(get_current_user),
+):
+    return service.get_pers_names(current_user.id)
 
 @router.get('/worker_day_visits')
 async def get_all(

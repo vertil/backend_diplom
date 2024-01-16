@@ -60,6 +60,21 @@ class Personal:
 
         return JSONResponse(content=[jsonable_encoder(answer)], status_code=200)
 
+    def get_pers_names(self,user_id: int):
+        if self._check_user_in_redis(user_id) is None:
+            logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+
+        answer = self.session_db.query(personalDB.id,personalDB.last_name,personalDB.first_name,personalDB.father_name ).filter().all()
+
+        ans = {}
+
+        for i in answer:
+            mystr = i
+            ans[mystr[0]] = f"{mystr[1]} {mystr[2]} {mystr[3]}"
+
+        return JSONResponse(content=ans, status_code=200)
+
     def worker_day_visits(self,per_id: int,date: str,user_id):
         if self._check_user_in_redis(user_id) is None:
             logging.error(f"machine/get_info user_id={user_id} - Invalid authentication credentials")
